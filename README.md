@@ -1,3 +1,4 @@
-# MY NIFTY PROJECT
+# PROMPT GENESIS
+## An image prompt generator for AI art
 
-Ok we are trying to work a repo!
+This is a very useful image prompt generator
