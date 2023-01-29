@@ -1,0 +1,39 @@
+{	
+	"photography":	{
+		"photo_style": {
+			"shot_type": ["close-up", "extreme close-up", "pov", "medium shot", "long shot"], 
+			"style": ["polaroid", "monochrome", "long exposure", "color splash", "tilt-shift"], 
+			"lighting": ["soft", "ambient", "ring", "sun", "cinematic"], 
+			"lens": ["wide-angle", "telephoto", "24mm", "ef 70mm", "bokeh"], 
+			"device": ["iphone x", "cctv", "nikon z fx", "canon", "gopro"]}, 
+		"photo_artists": ["Ansel Adams", "Ray Earnes", "Peter Kemp", "Ruth Bernhard"],
+		"pov": ["front", "overhead", "side", "low angle"], 
+		"environment": ["indoor", "outdoor", "underwater", "space"], 
+		"lighting": ["soft", "ambient", "ring light", "neon"], 
+		"color_scheme": ["monochromatic", "vibrant", "dark", "pastel", "earthy", "neutral"], 
+		"background": ["solid color", "nebula", "forest", "cityscape", "water"]},
+	"painting": {	
+		"paint_style": ["3d render", "studio ghibli", "movie poster", "impressionism", "pop art", "abstract expressionism", "surrealism"], 
+		"paint_artists": {
+			"portrait": ["Derek Gores", "Miles Aldridge,Jean Baptiste-Carpeaux", "Anne-Louis Girodet"], 
+			"landscape": ["Alejandro Bursido", "Jacques-Laurent Agasse", "Andreas Achenbach", "Cuno Amiet"], 
+			"horror": ["H.R.Giger", "Tim Burton", "Andy Fairhurst", "Zdzislaw Beksinski"], 
+			"anime": ["Makoto Shinkai", "Katsuhiro Otomo", "Masashi Kishimoto", "Kentaro Miura"], 
+			"scifi": ["Chesley Bonestell", "Karel Thole", "Jim Burns", "Enki Bilal"],  
+			"videogame": ["Emerson Tung", "Shaddy Safadi", "Kentaro Miura", "Feng Zhu"]
+			},
+		"art_mediums": ["chalk painting", "graffiti", "water colors", "oil painting", "fabric", "pencil drawing", "wood", "clay"]}, 		
+	"illustrations": {
+		"3d": ["isometric", "low poly", "pixar render", "3d blender render"], 
+		"art": ["children's book", "comic", "caricature", "splash art"], 
+		"poster": ["scientific illustration", "propaganda poster", "movie poster", "psychedelic art"], 
+		"various": ["vector", "ukiyo-e", "sticker", "map"]},
+	"emotions": {
+		"positive": ["cosy", "romantic", "joyful", "energetic", "hope", "lust", "peaceful", "satisfaction"], 
+		"negative": ["depressing", "loneliness", "grim", "regret", "suffering", "hopelessness", "fear", "disgust"]}, 
+	"aesthetics": {
+		"vibrant": ["weirdcore", "acidwave", "dreamcore", "vaporwave"], 
+		"gloomy": ["liminal space", "after hours", "brutalism", "post-apocalyptic"], 
+		"historic": ["baroque", "sovietwave", "wild west", "film noir"]}, 
+	"quality_words": ["HDR, UHD, 64K", "high quality", "studio lighting", "professional", "trending on artstation", "unreal engine", "vivid colors", "bokeh", "high resolution scan"]
+}

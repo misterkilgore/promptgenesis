@@ -1,26 +1,41 @@
-class PromptGenerator: 
-    MAIN_TYPE = ['photo', 'painting']
-    LIGHTING = ['soft', 'ambient', 'ring light', 'neon']
-    ENVIRONMENT = ['indoor', 'outdoor', 'underwater', 'space']
-    COLOR_SCHEME = ['vibrant', 'dark', 'pastel']
-    POV = ['front', 'overhead', 'side']
-    BACKGROUND = ['solid color', 'nebula', 'forest']
-    ART_STYLE = ['3d render', 'studio ghibli', 'movie poster']
-    PHOTO_STYLE = ['macro', 'telephoto']
-    
+import pandas as pd
+import numpy as np
+import json
+import logging
 
+class PromptGenerator: 
     
-    def __init__(self):
-        pass
+    def __init__(self, main_type='photo', history_file=None):
+        self.tags = []
+        self.main = main_type
+        
+        with open('promptgenesis/config.json') as config_file:
+            self.config = json.load(config_file)
+        
+        self.history_file = 'history.txt' if history_file is None else history_file
+        logging.basicConfig(filename=self.history_file, filemode='a', format='%(asctime)s - %(message)s', level=logging.INFO)    
     
-    def interactive_prompt(self):
-        print('1. Do you want a photo or a painting?')
-        print('2. What’s the subject of the photo? Person? An animal or perhaps a landscape?')
-        print('''3. What details do you want to add?
-        ○ Special Lighting. Soft, ambient, ring light, neon
-        ○ Environment. Indoor, outdoor, underwater, in space
-        ○ Color Scheme. Vibrant, dark, pastel
-        ○ Point of view. Front, Overhead, Side
-        ○ Background. Solid color, nebula, forest''')
-        print('4. In a specific art style? 3D render, studio ghibli, movie poster')
-        print('5. A specific photo type? Macro, telephoto')
+    def get_config(self):
+        return(self.config)
+           
+    def get_prompt(self):
+        if len(self.tags) > 0:
+            return ', '.join(self.tags)
+        else:
+            return None
+    
+    def add_tag(self, text):
+        self.tags.append(text)
+    
+    def add_prefix(self, subject):
+        if self.main_type == 'photo':
+            self.add_tags('a photo of ' + subject)
+        else:
+            self.add_tags('a painting of ' + subject)
+    
+    def log(self,text):
+        logging.info(text)
+    
+    def random_style(self, subject):
+        self.add_prefix(subject)
+        
